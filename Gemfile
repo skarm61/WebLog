@@ -17,3 +17,9 @@ group :test do
   gem 'simplecov'
   gem 'capybara'
 end
+
+
+gem 'bootstrap-sass'
+gem 'sass-rails'
+gem 'sqlite3'
+gem 'jquery-rails'
