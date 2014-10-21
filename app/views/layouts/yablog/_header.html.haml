@@ -6,13 +6,15 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      = link_to 'Project name', root_path, class: 'navbar-brand'
+      = link_to 'Project name', yablog.root_path, class: 'navbar-brand'
     .navbar-collapse.collapse
 
       %ul.nav.navbar-nav.navbar-right
         - if signed_in?
           %li
+            = link_to "Create new page", yablog.new_page_path
+          %li
             = link_to 'Sign out', destroy_user_session_path, method: :delete
         - else
           %li
-            = link_to 'Sign in', new_user_session_path
+            = link_to 'Sign in', yablog.new_user_session_path
