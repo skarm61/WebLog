@@ -12,6 +12,10 @@
  *
  *= require_tree .
  *= require_self
+ *= require metisMenu
+ *= require metisMenu
+ *= require font-awesome
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "sb-admin-2";

@@ -21,3 +21,12 @@ end
 gem 'bootstrap-sass'
 gem 'sass-rails'
 gem 'jquery-rails'
+
+
+source 'https://rails-assets.org' do
+  gem "rails-assets-font-awesome"
+  # gem "rails-assets-holderjs"
+  gem "rails-assets-metisMenu"
+  gem "rails-assets-morrisjs"
+  gem "rails-assets-bootstrap-social"
+end

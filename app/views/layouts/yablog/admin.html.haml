@@ -2,23 +2,29 @@
 %html
   %head
     %title WebLog
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = stylesheet_link_tag    'yablog/application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'yablog/application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    #main
-      #header
-        %strong.title WebLog Admin
-      #center
-        .sidebar
-          - if signed_in?
-            Signed as
-            = current_user.user_name
-            = button_to "Sign Out", destroy_user_session_path, method: :delete
-          %ul
-            - [:pages, :posts, :categories, :content_statuses].each do |item|
-              %li= link_to item.to_s.humanize, send("admin_#{item}_path")
-        .content
-          %p.notice= notice
-          %p.alert= alert
-          = yield
+    #wrapper
+      / Navigation
+      %nav.navbar.navbar-default.navbar-static-top{:role => "navigation", :style => "margin-bottom: 0"}
+        .navbar-header
+          %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.navbar-brand{:href => "index.html"} SB Admin v2.0
+        %ul.nav.navbar-top-links.navbar-right
+          = render "yablog/admin/shared/navbar"
+
+        .navbar-default.sidebar{:role => "navigation"}
+          = render "yablog/admin/shared/sidebar"
+
+      #page-wrapper
+        .row
+          .col-lg-12
+            = yield
+
+      .footer
