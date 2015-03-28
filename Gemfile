@@ -1,4 +1,5 @@
 source "https://rubygems.org"
+source 'https://rails-assets.org'
 
 # Declare your gem's dependencies in yablog.gemspec.
 # Bundler will treat runtime dependencies like base dependencies, and
@@ -23,10 +24,8 @@ gem 'sass-rails'
 gem 'jquery-rails'
 
 
-source 'https://rails-assets.org' do
-  gem "rails-assets-font-awesome"
-  # gem "rails-assets-holderjs"
-  gem "rails-assets-metisMenu"
-  gem "rails-assets-morrisjs"
-  gem "rails-assets-bootstrap-social"
-end
+gem "rails-assets-font-awesome"
+# gem "rails-assets-holderjs"
+gem "rails-assets-metisMenu"
+gem "rails-assets-morrisjs"
+gem "rails-assets-bootstrap-social"
