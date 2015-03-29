@@ -14,18 +14,22 @@ gem 'rspec-rails'
 gem 'factory_girl_rails'
 gem 'pry-rails'
 gem 'foreigner'
+
+gem 'bootstrap-sass'
+gem 'sass-rails'
+gem 'jquery-rails'
+
+gem 'rails-assets-font-awesome'
+gem 'rails-assets-metisMenu'
+gem 'rails-assets-morrisjs'
+gem 'rails-assets-bootstrap-social'
+
 group :test do
   gem 'shoulda'
   gem 'simplecov'
   gem 'capybara'
 end
-gem 'bootstrap-sass'
-gem 'sass-rails'
-gem 'jquery-rails'
 
-
-gem "rails-assets-font-awesome"
-# gem "rails-assets-holderjs"
-gem "rails-assets-metisMenu"
-gem "rails-assets-morrisjs"
-gem "rails-assets-bootstrap-social"
+group :development do
+  gem 'quiet_assets'
+end
